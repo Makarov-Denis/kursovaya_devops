@@ -83,7 +83,7 @@ resource "yandex_compute_instance" "nginx-2" {
 resource "yandex_compute_instance" "bastion" {
   name                      = "vm-bastion"
   hostname                  = "bastion"
-  zone                      = "ru-central1-b"
+  zone                      = "ru-central1-b" #c
   allow_stopping_for_update = true
   platform_id               = "standard-v1" 
 
@@ -118,7 +118,7 @@ resource "yandex_compute_instance" "bastion" {
 resource "yandex_compute_instance" "zabbix" {
   name                      = "vm-zabbix"
   hostname                  = "zabbix"
-  zone                      = "ru-central1-b"
+  zone                      = "ru-central1-b" #c
   allow_stopping_for_update = true
   platform_id               = "standard-v1"
 
@@ -152,7 +152,7 @@ resource "yandex_compute_instance" "zabbix" {
 resource "yandex_compute_instance" "elastic" {
   name                      = "vm-elastic"
   hostname                  = "elastic"
-  zone                      = "ru-central1-b"
+  zone                      = "ru-central1-b" #c
   allow_stopping_for_update = true
   platform_id               = "standard-v1"
 
@@ -185,7 +185,7 @@ resource "yandex_compute_instance" "elastic" {
 resource "yandex_compute_instance" "kibana" {
   name                      = "vm-kibana"
   hostname                  = "kibana"
-  zone                      = "ru-central1-b"
+  zone                      = "ru-central1-b" #c
   allow_stopping_for_update = true
   platform_id               = "standard-v1"
 
