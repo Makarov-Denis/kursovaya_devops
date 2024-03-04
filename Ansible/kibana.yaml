@@ -8,8 +8,7 @@
       deb: "https://mirror.yandex.ru/mirrors/elastic/7/pool/main/k/kibana/kibana-7.15.1-amd64.deb"
 
   - name: Копируем конфигурационный файл kibana
-    copy:
-      src: /home/user/111/kibana.yml
+      template: /home/user/ansible/kibana.j2
       dest: /etc/kibana/kibana.yml
 
   - name: daemon_reload
