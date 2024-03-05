@@ -15,7 +15,8 @@
       deb: /home/user/filebeat-7.17.11-amd64.deb
 
   - name: Копируем конфиг filebeat
-      template: /home/user/111/filebeat.j2
+      template: 
+      src: //home/user/111/filebeat.j2
       dest: /etc/filebeat/filebeat.yml
 
   - name: Перезапускаем сервисы
