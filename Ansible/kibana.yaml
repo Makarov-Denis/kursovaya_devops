@@ -1,6 +1,8 @@
 - hosts: kibana.ru-central1.internal
   become: yes
   gather_facts: true
+  vars:
+     elastic_httphost: 10.0.3.4:9200
   tasks:
 
   - name: Установка kibana
