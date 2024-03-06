@@ -1,4 +1,4 @@
-#=========================== Filebeat inputs =============================
+ #=========================== Filebeat inputs =============================
   
   filebeat.inputs:
   - type: log
@@ -21,7 +21,12 @@
   #============================== Kibana =====================================
   
   setup.kibana:
-    host: "10.0.4.3:5601"
+    host: "{{kibana_host}}"
+
+  #-------------------------- Elasticsearch output ------------------------------
+
+  output.elasticsearch:
+  hosts: ["{{elastic_host}}"]
   
   #----------------------------- Logstash output --------------------------------
   output.logstash:
