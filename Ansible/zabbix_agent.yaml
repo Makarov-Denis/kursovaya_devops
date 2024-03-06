@@ -2,6 +2,8 @@
 - name: Установка Zabbix Agent на группу серверов web
   hosts: web
   become: true
+  vars:
+    zabbix_server: 10.0.4.5
   tasks:
     - name: Установка необходимых пакетов
       apt:
