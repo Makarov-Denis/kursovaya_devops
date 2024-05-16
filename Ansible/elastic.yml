@@ -1,6 +1,6 @@
 ---
 - name: Установка Elastic
-  hosts: elastic_srv
+  hosts: elastic.ru-central1.internal
   become: yes
   gather_facts: true
 
@@ -11,7 +11,7 @@
 
   - name: Копируем конфиг файл elasticsearch
     copy:
-      src: /home/user/ansible/elastic_conf.yml
+      src: /home/user/.ansible/elastic_conf.yml
       dest: /etc/elasticsearch/elasticsearch.yml
 
   - name: daemon_reload
